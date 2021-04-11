@@ -15,4 +15,4 @@ public class MaxExcept extends ArithmeticException {
 	}
 
 
-}
+
