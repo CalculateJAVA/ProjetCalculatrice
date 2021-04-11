@@ -14,6 +14,7 @@ public class Store implements Undoable {
 		
 	@Override
 	public void apply() {
+		GestionExcept.gestionMinMax(nombre);
 		this.pile.push(nombre);
 	}
 		
