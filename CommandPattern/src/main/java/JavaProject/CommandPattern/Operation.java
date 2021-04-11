@@ -32,6 +32,9 @@ public enum Operation {
 	DIVISION("/"){
 		@Override
 	    public double evaluation(double a , double b) {
+			if(b == 0) {
+				throw new DivParZeroExcept();
+			}
 			return a / b;
 		}
 
