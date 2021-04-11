@@ -13,6 +13,5 @@ public class ArgPileExcept extends IllegalArgumentException {
 		super("Pile vide ou pas assez d'operandes");
 	}
 
-	
 
 }
