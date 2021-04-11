@@ -9,9 +9,9 @@ public class ArgPileExcept extends IllegalArgumentException {
 	/**
 	* Constructeur
 	*/
-		public ArgPileExcept() {
-			super("Pile vide ou pas assez d'operandes");
-		}
+	public ArgPileExcept() {
+		super("Pile vide ou pas assez d'operandes");
+	}
 
 	
 
