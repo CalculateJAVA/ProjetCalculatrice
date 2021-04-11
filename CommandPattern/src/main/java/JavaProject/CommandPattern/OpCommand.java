@@ -10,8 +10,10 @@ public class OpCommand implements Undoable{
 		private Stack<Double> pile;
 		
 		public OpCommand(Stack<Double> pile, Operation op) {
+			GestionExcept.handleStackSize(pile.size(), 2);
 			this.pile = pile;
 			this.op = op;
+			
 		}
 
 		@Override
@@ -19,6 +21,16 @@ public class OpCommand implements Undoable{
 			double resultat;
 			this.last = this.pile.pop();
 			this.beforeLast = this.pile.pop();
+			try {
+				resultat = op.evaluation(beforeLast, last);
+				GestionExcept.gestionMinMax(resultat);
+				this.pile.push(resultat);
+			}
+			catch (ArithmeticException except) {
+				this.pile.push(beforeLast);
+				this.pile.push(last);
+				throw except;
+			}
 			
 		}
 		
