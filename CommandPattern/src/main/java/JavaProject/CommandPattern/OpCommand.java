@@ -22,7 +22,12 @@ public class OpCommand implements Undoable{
 			
 		}
 		
-		
+		@Override
+		public void undo() {
+			this.pile.pop();
+			this.pile.push(beforeLast);
+			this.pile.push(last);
+		}
 
 	}
 
