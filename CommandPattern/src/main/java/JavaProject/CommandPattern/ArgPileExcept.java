@@ -6,10 +6,9 @@ package JavaProject.CommandPattern;
  */
 
 public class ArgPileExcept extends IllegalArgumentException {
-
-		/**
-		 * Constructeur
-		 */
+	/**
+	* Constructeur
+	*/
 		public ArgPileExcept() {
 			super("Pile vide ou pas assez d'operandes");
 		}
