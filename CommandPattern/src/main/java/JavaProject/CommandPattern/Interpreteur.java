@@ -28,9 +28,14 @@ public class Interpreteur {
 			command.apply();
 		}	
 		
+		
 		public void execStore(Undoable command) {
-			command.apply();
+			try {
+			 command.apply();
 			this.historique.add(command);	
+			} catch (Exception except) {
+				throw except;
+			}
 			
 		}
 		
