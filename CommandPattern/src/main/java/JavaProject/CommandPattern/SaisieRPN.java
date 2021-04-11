@@ -10,34 +10,32 @@ import java.util.Scanner;
 public class SaisieRPN {
 	private MoteurRPN m;
 	private Scanner scan;
-
-		public SaisieRPN(){
-			m = new MoteurRPN();
+	public SaisieRPN(){
+		m = new MoteurRPN();
 		}
 
 		/**
 		 * Initialiser le Scanner
 		 */
-		public void initScanner(Scanner scan) {
-			this.scan = scan;		
+	public void initScanner(Scanner scan) {
+		this.scan = scan;		
 		}
 
 		/**
 		 * Fermer le Scanner
 		 */
-		public void fermerScanner() {
-			scan.close();
+	public void fermerScanner() {
+		scan.close();
 		}
 		
 		
-		public void saisie() {
-			this.initScanner(new Scanner(System.in));
+	public void saisie() {
+		this.initScanner(new Scanner(System.in));
+        String input = ""; 
+		String s = "";
 
-			String input = ""; 
-			String s = "";
-
-			while(m.ouvert()) {
-				System.out.println("Pour effectuer vos calculs ,veuillez Saisir soi un entier ou une opération ou bien exit pour sortir,tapez entrer");
+		while(m.ouvert()) {
+			System.out.println("Pour effectuer vos calculs ,veuillez Saisir soi un entier ou une opération ou bien exit pour sortir,tapez entrer");
 				try {
 					input = scannerLigne();
 					s += input + " ";
