@@ -19,7 +19,7 @@ public class Switch {
 	}
 	
 	
-	public void fermé() {
+	public void fermer() {
 		switchOk = false;
 	}	
 	
