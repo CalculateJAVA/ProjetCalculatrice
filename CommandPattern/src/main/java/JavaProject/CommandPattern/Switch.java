@@ -28,6 +28,5 @@ public class Switch {
 		switchOk = true;
 	}	
 
-	
 
 }
