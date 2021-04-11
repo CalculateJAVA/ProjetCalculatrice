@@ -8,8 +8,10 @@ import java.util.Stack;
 public class Undo implements Command {
 	private Undoable lastCommand;
 	public Undo(Stack<Undoable> historique) {
+		GestionExcept.handleStackSize(historique.size(), 1);
 			this.lastCommand = historique.pop();
 		}
+	
 	    
 	    @Override
 		public void apply() {
